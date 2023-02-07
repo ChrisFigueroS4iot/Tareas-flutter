@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+
+final List<Map<String, String>> _listElements = [
+    {
+      "day": "Day 1",
+      "place": "La playa",
+      "image": "https://i.imgur.com/noNCN3V.jpg",
+    },
+    {
+      "day": "Day 2",
+      "place": "El bosque",
+      "image": "https://i.imgur.com/noNCN3V.jpg",
+    },
+    {
+      "day": "Day 3",
+      "place": "El desierto",
+      "image": "https://i.imgur.com/noNCN3V.jpg",
+    },
+  ];
+
 class ItemActividad extends StatelessWidget {
   ItemActividad({super.key});
 

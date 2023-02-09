@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:info_lugar/info_lugar.dart';
 import 'package:info_lugar/item_actividad.dart';
-
+final List<Map<String, String>> _listElements = [
+    {
+      "day": "Day 1",
+      "place": "Los cabos",
+      "image": "https://www.mexicodestinos.com/blog/wp-content/uploads/2022/12/destacada-2.jpg",
+    },
+    {
+      "day": "Day 2",
+      "place": "Costa mujeres",
+      "image": "https://www.mexicodestinos.com/blog/wp-content/uploads/2022/11/destacada-1.jpg",
+    },
+    {
+      "day": "Day 3",
+      "place": "Cancun",
+      "image": "https://www.mexicodestinos.com/blog/wp-content/uploads/2022/10/destacada-1.jpg",
+    },
+    
+  ];
+  
 class HomePage extends StatelessWidget {
   const HomePage({
     Key? key,
@@ -60,9 +78,13 @@ class HomePage extends StatelessWidget {
                         height: 200,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemCount: 10,
+                          itemCount: _listElements.length,
                           itemBuilder: (BuildContext context, int index) {
-                            return ItemActividad();
+                            return ItemActividad(
+                              day: _listElements[index]["day"]!,
+                              place: _listElements[index]["place"]!,
+                              image: _listElements[index]["image"]!,
+                            );
                           },
                         ),
                       ),
